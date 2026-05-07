@@ -31,3 +31,4 @@ public class Wizard {
     @Column(name = "wizardFan")
     private Boolean isDeatheater;
 }
+
