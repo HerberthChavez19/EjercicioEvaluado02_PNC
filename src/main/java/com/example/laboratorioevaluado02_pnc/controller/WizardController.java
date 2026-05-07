@@ -8,12 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/wizards")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class WizardController {
     private final WizardServiceImpl wizardService;
 
-    @PostMapping("/create")
+    @PostMapping("/wizards")
     public ResponseEntity<Wizard> createProduct(@RequestBody Wizard wizard) {
         wizardService.createWizard(wizard);
         return ResponseEntity
@@ -21,5 +21,5 @@ public class WizardController {
                 .body(wizard);
     }
 
-    
+
 }
